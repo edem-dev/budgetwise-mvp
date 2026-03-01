@@ -3,13 +3,13 @@ import React from 'react';
 const ExpenseList = ({expenses , onDeleteExpense}) => {
 
     if(expenses.length === 0) return (
-        <div className={"bg-white p-6 rounded-2xl shadow text-center text-gray-400 text-sm"}>
+        <div className={"bg-white p-6 rounded-2xl  text-center text-gray-400 text-sm"}>
             No Expense Found. Click "+" to add one above.
         </div>
     )
 
     return (
-        <div className="bg-white p-6 rounded-2xl shadow space-y-3">
+        <div className="bg-white p-6 rounded-2xl border border-gray-300  space-y-3">
             <h2 className="text-xl font-semibold text-gray-700">Expenses</h2>
             {expenses.map((expense) => (
                 <div

@@ -1,7 +1,7 @@
 "use client";
 import React, {useState} from 'react';
 
-const ExpenseForm = ({onAddExpense}) => {
+const ExpenseForm = ({onAddExpense , onClose}) => {
 
     const [name, setName] = useState("");
     const [amount, setAmount] = useState("");
@@ -27,7 +27,7 @@ const ExpenseForm = ({onAddExpense}) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className={"bg-white p-6 rounded-2xl shadow space-y-4"}>
+        <form onSubmit={handleSubmit} className={"bg-white p-6 rounded-2xl  space-y-4"}>
             <h2 className={"text-xl font-semibold text-gray-700"}>Add Expense</h2>
             <input
                 type="text"
@@ -60,6 +60,13 @@ const ExpenseForm = ({onAddExpense}) => {
                 >
                     Add Expense
                 </button>
+            <button
+                onClick={onClose}
+                type={"button"}
+                className={"w-full bg-red-500 text-gray-300 rounded-lg p-2 text-sm font-medium "}
+            >
+                Close
+            </button>
         </form>
     );
 };
